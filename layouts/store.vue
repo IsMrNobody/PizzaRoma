@@ -34,7 +34,9 @@
       <!-- <v-spacer /> -->
       <div class="logoBar ml-5">
         <!-- <v-img src="/logo.png"></v-img> -->
-        <h1 class="primary--text">Pizza Top</h1>
+        <nuxt-link to="/" class="style">
+          <h1 class="primary--text">Pizza Roma</h1>
+        </nuxt-link>
       </div>
       <!-- <v-toolbar-title v-text="title" /> -->
       <v-spacer />
@@ -71,7 +73,7 @@
           flat
           tile
         >
-          <v-card-title class="cuarto">
+          <v-card-title class="orange">
             <strong class="subheading">Conecta con nosotros!</strong>
 
             <v-spacer></v-spacer>
@@ -90,7 +92,7 @@
           </v-card-title>
 
           <v-card-text id="contacta" class="py-2 text-center">
-            {{ new Date().getFullYear() }} — <strong>Pizza Top - Anaco</strong>
+            {{ new Date().getFullYear() }} — <strong>Pizza Roma - Anaco</strong>
           </v-card-text>
         </v-card>
       </v-footer>
@@ -143,16 +145,7 @@ export default {
   /* margin-top: 75px; */
   width: 180px;
 }
-.greenColor {
-  background-color: #565D47;
-}
-.rosaColor {
-  background-color: #EAAC9D;
-}
-.beihgColor {
-  background-color: #EAAC9D;
-}
-.marronColor {
-  background-color: #B49C73;
+.style {
+  text-decoration: none;
 }
 </style>

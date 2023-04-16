@@ -52,13 +52,13 @@
       <!-- <v-spacer /> -->
       <div class="logoBar">
         <!-- <v-img src="https://res.cloudinary.com/dku13l2ep/image/upload/v1674699887/DaniPotter/Magia_Legal_bea1g7.png"></v-img> -->
-        <h1 class="primary--text">Pizza Top</h1>
+        <h1 class="primary--text">Pizza Roma</h1>
       </div>
       <!-- <v-toolbar-title v-text="title" /> -->
       <v-spacer />
       <!-- <v-btn text>About Us</v-btn> -->
       <v-btn color="primary" text @click="contacto">Contacto</v-btn>
-      <v-btn color="primary" to="/menu" text >Tienda</v-btn>
+      <v-btn color="primary" to="/menu" text >Menu</v-btn>
     </v-app-bar>
     <v-main class="tercero">
       <!-- <v-container fluid> -->
@@ -87,14 +87,14 @@
               dark
               icon
             >
-              <v-icon color="secondary" size="24px">
+              <v-icon color="orange" size="24px">
                 {{ icon }}
               </v-icon>
             </v-btn>
           </v-card-title>
 
           <v-card-text id="contacta" class="py-2 text-center">
-            {{ new Date().getFullYear() }} — <strong>Pizza Top - Anaco</strong>
+            {{ new Date().getFullYear() }} — <strong>Pizza Roma - Anaco</strong>
           </v-card-text>
         </v-card>
       </v-footer>
@@ -128,7 +128,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Magia Legal'
+      title: 'Pizza Roma'
     }
   },
   methods: {
@@ -149,8 +149,8 @@ export default {
 .marronColor {
   background-color: #071622;
 }
-.redes:hover {
+/* .redes:hover {
   transform: scale(1.5);
-  background-color: yellow;
-}
+  background-color: orange;
+} */
 </style>

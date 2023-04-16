@@ -8,15 +8,15 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - Comida Rapida',
-    title: 'Pizza Top',
+    title: 'Pizza Roma',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'Pizza Top', content: 'Comida Rapida' },
-      { name: 'format-detection', content: 'Pizza-top' }
+      { hid: 'description', name: 'Pizza Roma', content: 'Comida Rapida' },
+      { name: 'format-detection', content: 'Pizza-roma' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -30,7 +30,7 @@ export default {
   loading: { color: 'secondary' },
 
   manifest: {
-    name: 'Pizza Top',
+    name: 'Pizza Roma',
     short_name: 'Pizzeria',
     background_color: '#EAAC9D',
     theme_color: 'secondary',

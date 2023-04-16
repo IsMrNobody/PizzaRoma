@@ -5,7 +5,7 @@
         <!-- <h1>The Taste of Your Celebrations</h1> -->
         <img width="70%" :src="merchant.logo" alt="">
         <v-col sm="12" cols="9" class="mx-auto">
-          <p>Lunes a Domingo <br> de 11:00am a 11:00pm</p>
+          <p>Lunes a Domingo <br> de 10:00am a 10:00pm</p>
           <h2 class="beige--text spaci">Llegamos a la puerta de tu casa</h2>
         </v-col>
         <v-btn outlined color="primary" to="/" class="mt-5">Ver Menu</v-btn>
@@ -14,7 +14,7 @@
     <v-container>
       <div class="text-center pad">
         <v-card max-width="700" flat class="transparent mx-auto mb-5">
-          <h2 class="siz">Comida Ràpida</h2>
+          <h2 class="siz">Comida Rápida</h2>
           <h3>
             Selecciona lo que quieres comer hoy y disfruta de sabores que ofrecemos con tu comida favorita
           </h3>
@@ -29,14 +29,14 @@
       <ParallaxHome class="parallax" />
     <v-container fluid>
       <div>
-        <BannerHome class="mb-12" />
+        <BannerHome />
       </div>
       <v-row justify="center" class="contacto">
         <v-col class="my-auto" sm="4" cols>
           <v-img
             width="300"
             class="mx-auto moto"
-            src="https://res.cloudinary.com/dku13l2ep/image/upload/v1674829503/Pizza%20Top/Recursos/moto_trxig6.png">
+            src="https://res.cloudinary.com/dku13l2ep/image/upload/v1681322363/JARTATE/Ciudad/Anaco/pizza%20roma/moto_roma_vrflo9.png">
           </v-img>
         </v-col>
         <Contact />
@@ -52,21 +52,21 @@ export default {
       cards: [
         {
           title: 'Pizza',
-          subtitle: 'Tenemos las mejores combinaciones de sabores con tus bebidas favoritas',
+          subtitle: 'Tenemos las mejores combinaciones de sabores',
           icono: '',
-          img: 'https://imagenes.20minutos.es/files/og_thumbnail/uploads/imagenes/2022/10/20/pizza.jpeg'
+          img: 'https://res.cloudinary.com/dku13l2ep/image/upload/v1681314070/JARTATE/Ciudad/Anaco/pizza%20roma/promo/pizzav_jrs8wj.png'
         },
         {
           title: 'Pollo',
           subtitle: 'Pollo frito con papas y tus bebidas favoritas',
           icono: '',
-          img: 'https://unareceta.com/wp-content/uploads/2017/01/pollo-frito.jpg'
+          img: 'https://res.cloudinary.com/dku13l2ep/image/upload/v1681314075/JARTATE/Ciudad/Anaco/pizza%20roma/promo/pollo_mngcuc.png'
         },
         {
-          title: 'Pasticho',
-          subtitle: 'Delicioso pastichos relleno de carne y salsa de tomate',
+          title: 'Parrilla',
+          subtitle: 'Tenemos la mejor parrilla de la zona con una rica ensalada',
           icono: '',
-          img: 'https://www.comedera.com/wp-content/uploads/2022/04/pasticho-venezolano.jpg'
+          img: 'https://res.cloudinary.com/dku13l2ep/image/upload/v1681314070/JARTATE/Ciudad/Anaco/pizza%20roma/promo/parrilla_omw3n1.png'
         }
       ]
     }
@@ -93,10 +93,10 @@ export default {
 .fix {
   /* content: ''; */
   backdrop-filter: blur(20px);
-  background-color: rgba(0, 0, 0, 0.419);
+  background-color: rgba(205, 136, 0, 0.419);
 }
 .pad {
-  padding-top: 40px;
+  padding-top: 80px;
   padding-bottom: 120px;
 }
 .parallax {
@@ -107,7 +107,7 @@ export default {
   padding-bottom: 80px;
   margin-top: 180px;
   background: rgb(255,0,0);
-background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(210,21,0,1) 20%, rgba(0,0,0,1) 70%);
+background: linear-gradient(180deg, rgb(255, 170, 0) 0%, rgb(210, 123, 0) 20%, rgba(0,0,0,1) 70%);
 }
 h1 {
   font-size: 4rem;

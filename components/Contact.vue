@@ -17,7 +17,7 @@
       @submit.prevent="submit"
     >
       <v-container fluid>
-        <h3 class="primary--text mb-10">Contactanos y comparte tus dudas y sugerencias!.</h3>
+        <h3 class="mb-10">Contactanos y comparte tus dudas y sugerencias!.</h3>
         <v-row>
           <v-col
             cols="12"
@@ -66,7 +66,7 @@
         <v-spacer></v-spacer>
         <v-btn
           outlined
-          color="cuarto"
+          color="orange"
           type="submit"
         >
           Enviar

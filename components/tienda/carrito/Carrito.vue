@@ -25,7 +25,7 @@
       <v-card color="tercero">
         <v-toolbar
             dark
-            color="cuarto"
+            color="orange"
         >
             <v-btn
               icon
@@ -95,7 +95,7 @@
             <!-- <v-spacer></v-spacer> -->
             <v-col sm="2" align="end">
               <v-btn outlined large light color="primary" @click="seeForm()">
-              Buy
+              Comprar
               </v-btn>
             </v-col>
           </v-row>
