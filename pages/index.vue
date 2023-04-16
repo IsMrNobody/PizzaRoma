@@ -116,7 +116,7 @@ p {
   size: 18px;
 }
 .banner {
-  height: 60vh;
+  height: 62vh;
   width: 100vw;
 }
 .siz {

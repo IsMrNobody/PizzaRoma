@@ -10,7 +10,7 @@
         <v-btn
           absolute
           fab
-          color="tercero"
+          color="orange"
           large
           right
           top
@@ -19,7 +19,7 @@
           @click="value2(0)"
           v-on="on"
         >
-          <v-icon color="cuarto">mdi-cart</v-icon>
+          <v-icon large color="">mdi-plus</v-icon>
         </v-btn>
       </template>
       <v-container>
@@ -27,7 +27,7 @@
           <v-card flat max-width="600" class="mx-auto">
             <v-toolbar
               dark
-              color="#565D47"
+              color="orange"
             >
               <v-btn
                 icon
@@ -64,24 +64,24 @@
                       <v-btn
                         outlined
                         x-large
-                        color="#EAAC9D"
+                        color="green"
                         @click="addCart()"
                       >
-                        Add to
+                        Agregar
                         <v-icon>mdi-cart</v-icon>
                       </v-btn>
                     </v-card-actions>
                     <v-card-title>{{ producto.name }}</v-card-title>
-                    <v-card-subtitle>{{ producto.category }}</v-card-subtitle>
+                    <!-- <v-card-subtitle>{{ producto.category }}</v-card-subtitle> -->
                     <v-card-text>
                       <p class="text-subtitle-1 grey--text">{{ producto.description }}</p>
                       <!-- <p class="display-1">$ {{ producto.price }}</p> -->
                     </v-card-text>
                     <v-card-text>
-                      <p>Portions:</p>
+                      <p>Porciones:</p>
                       <v-chip-group                        
                         v-model="selection"
-                        active-class="pink lighten-1 white--text"
+                        active-class="orange darken-1 white--text"
                         column
                       >                   
                         <v-chip 
@@ -98,7 +98,7 @@
                     </v-card-text>
                     <v-col>
                       <v-card-text>
-                        <h4 class="grey--text">Ingredients:</h4>
+                        <h4 class="grey--text">Ingredientes:</h4>
                         <p class="grey--text">{{ producto.ingredients }}</p>
                       </v-card-text>
                     </v-col>

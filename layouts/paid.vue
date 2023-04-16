@@ -3,7 +3,7 @@
     <v-navigation-drawer
       v-model="drawer"
       :clipped="clipped"
-      class="marronColor"
+      class=""
       fixed
       app
     >
@@ -27,7 +27,7 @@
     <v-app-bar
       :clipped-left="clipped"
       fixed
-      color="#EAAC9D"
+      color="orange"
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
@@ -112,9 +112,9 @@ export default {
   width: 180px;
 }
 .greenColor {
-  background-color: #565D47;
+  background-color: black;
   background-size: cover;
-  background-image: url('https://firebasestorage.googleapis.com/v0/b/eden-d8ccb.appspot.com/o/Sweet%20Jesus%2Fparallax_2.png?alt=media&token=8d398c2d-854f-45bb-965a-72a9f78697be');
+  /* background-image: url('https://firebasestorage.googleapis.com/v0/b/eden-d8ccb.appspot.com/o/Sweet%20Jesus%2Fparallax_2.png?alt=media&token=8d398c2d-854f-45bb-965a-72a9f78697be'); */
 }
 .rosaColor {
   background-color: #EAAC9D;

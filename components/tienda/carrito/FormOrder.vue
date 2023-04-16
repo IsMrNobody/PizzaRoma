@@ -4,7 +4,7 @@
       <v-col sm="" cols>
         <v-card flat>
           <v-card-subtitle>
-            Contact details
+            Detalles de contacto
           </v-card-subtitle>
           <v-card-text>
             <v-form
@@ -18,7 +18,7 @@
                 v-model="name"
                 :rules="nameRules"
                 outlined
-                placeholder="Your name"
+                placeholder="Nombre"
                 required
               ></v-text-field>
               <v-text-field
@@ -33,10 +33,10 @@
                 ref="phone"
                 v-model="phone"
                 :rules="phoneRules"
-                label="Add area code"
+                label="Codigo de area"
                 type="Number"
                 outlined
-                placeholder="Phone"
+                placeholder="telefono"
                 required
               ></v-text-field>
             </v-form>
@@ -46,7 +46,7 @@
       <v-col sm="" cols>
         <v-card flat>
             <v-card-subtitle>
-              Add address
+              Agregar Dirección
             </v-card-subtitle>
             <v-card-text>
                 <v-alert
@@ -54,15 +54,15 @@
                   color="primary"
                   text
                 >
-                  Delivery include
+                  Delivery incluido
                 </v-alert>
                 <v-form>
                   <v-text-field
                     ref="address"
                     v-model="address"
                     outlined
-                    label="Address Line"
-                    placeholder="Direction"
+                    label="Dirección"
+                    placeholder="Dirección"
                     required
                     class="mt-7"
                   ></v-text-field>
@@ -72,8 +72,8 @@
                         ref="house"
                         v-model="house"
                         outlined
-                        label="House"
-                        placeholder="House"
+                        label="Casa"
+                        placeholder="Casa"
                         required
                       ></v-text-field>
                     </v-col>
@@ -82,8 +82,8 @@
                         ref="floor"
                         v-model="floor"
                         outlined
-                        label="Floor"
-                        placeholder="Floor"
+                        label="Piso"
+                        placeholder="Piso"
                         required
                       ></v-text-field>
                     </v-col>
@@ -94,20 +94,20 @@
       </v-col>
       <v-col sm="" cols>
         <v-card-subtitle>
-          Payment Methods
+          Metodos de pago
         </v-card-subtitle>
         <PaymentCheck />
-        <v-col class="mt-4">
+        <!-- <v-col class="mt-4">
           <DatePicker />
-        </v-col>
-        <v-card class="ma-2 mt-5" flat>
+        </v-col> -->
+        <v-card class="mt-5 transparent" flat>
           <v-textarea
             v-model="comment"
             outlined
+            bg-color="light-blue"
             auto-grow
-            label="Comment"
+            label="Comentario"
             rows="4"
-            row-height="20"
             shaped
           ></v-textarea>
         </v-card>
@@ -144,11 +144,11 @@
 
 <script>
 import PaymentCheck from '@/components/tienda/carrito/PaymentCheck'
-import DatePicker from '@/components/tienda/carrito/DatePicker'
+// import DatePicker from '@/components/tienda/carrito/DatePicker'
 export default {
   components: {
     PaymentCheck,
-    DatePicker
+    // DatePicker
   },
   props: {
     total: {
@@ -161,19 +161,19 @@ export default {
       comment: '',
       name: '',
       nameRules: [
-        v => !!v || 'Name is required',
+        v => !!v || 'Nombre es requerido',
         // v => (v && v.length <= 10) || 'Name must be less than 10 characters',
       ],
       phone: '',
       phoneRules: [
-        v => !!v || 'Phone is required',
+        v => !!v || 'Telefono es requerido',
         // v => (v && v.length === 12) || 'Name must be less than 12 characters',
       ],
       address: '', 
       email: '',
       emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+        v => !!v || 'E-mail es requerido',
+        v => /.+@.+\..+/.test(v) || 'E-mail debe ser valido',
       ],
       house: '',
       floor: '',

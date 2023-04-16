@@ -9,7 +9,7 @@
       cols="6"
 
     > 
-      <v-hover v-slot="{ hover }">
+      <v-hover v-slot="{ }">
         <v-card
           class="sombra"
           outlined
@@ -20,15 +20,15 @@
             height="155"
             :src="p.img.url"
           >
-            <v-expand-transition>
+            <!-- <v-expand-transition>
               <div
                 v-if="hover"
                 class="d-flex transition-fast-in-fast-out primary v-card--reveal text-h2 secondary--text"
                 style="height: 100%;"
               >
-                ${{ p.price }}
+                ${{ p.portion[0].price }}
               </div>
-            </v-expand-transition>
+            </v-expand-transition> -->
           </v-img>
           <v-card-text
             class="pt-5"
@@ -75,9 +75,9 @@ import ProductDialog from '@/components/tienda/ProductDialog'
   position: absolute;
   width: 100%;
 }
-.sombra:hover {
+/* .sombra:hover {
   box-shadow: 2px 100px 80px 10px #ff000040;
-}
+} */
 .sombra {
   transition: 0.8s;
 }

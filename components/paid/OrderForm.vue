@@ -8,7 +8,7 @@
         <v-list-item-title class="text-h5">
           {{ order.nameUser }}
         </v-list-item-title>
-        <v-list-item-subtitle>Date Delivery: {{ order.deliveryDate }}</v-list-item-subtitle>
+        <v-list-item-subtitle>Fecha: {{ order.deliveryDate }}</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
 
@@ -16,7 +16,7 @@
       <v-row align="center">
         <v-col
           class="text-h4 primary--text"
-          cols="6"
+          sm="6"
         >
           $ {{ order.total }}
         </v-col>
