@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     password() {
-      if (this.pass === 'glever') {
+      if (this.pass === 'roma') {
         this.history = true
       } else {
         alert('Debes ingresar la contraseña correcta')

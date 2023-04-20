@@ -8,7 +8,7 @@
         <v-list-item-title class="text-h5">
           {{ order.nameUser }}
         </v-list-item-title>
-        <v-list-item-subtitle>Fecha: {{ order.deliveryDate }}</v-list-item-subtitle>
+        <v-list-item-subtitle>Fecha: {{ order.createdAt }}</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
 
@@ -18,7 +18,7 @@
           class="text-h4 primary--text"
           sm="6"
         >
-          $ {{ order.total }}
+          {{ order.total }} $
         </v-col>
         <!-- <v-col cols="6">
           <v-img
@@ -70,7 +70,7 @@
             :disabled="order.paid"
             @click="checkOrder"
           >
-            check order
+            check
           </v-btn>
         </v-row>
       </v-col>
@@ -85,7 +85,7 @@
 
     <v-list class="marron">
       <v-card-text>
-        Products:
+        Productos:
       </v-card-text>
       <v-list-item
         v-for="(item, i) in order.products"

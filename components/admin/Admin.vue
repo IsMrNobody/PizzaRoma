@@ -58,16 +58,16 @@
 
                 <v-divider></v-divider>
 
-                <v-list dense class="secondary">
+                <v-list dense class="orange darken-2">
                   <v-list-item>
-                    <v-list-item-content>Amount:</v-list-item-content>
-                    <v-list-item-content class="text-h5 green--text align-end">
-                      {{ item.total }}
+                    <v-list-item-content>Monto:</v-list-item-content>
+                    <v-list-item-content class="text-h4 align-end">
+                      {{ item.total }}$
                     </v-list-item-content>
                   </v-list-item>
 
                   <v-list-item>
-                    <v-list-item-content>Status Paid:</v-list-item-content>
+                    <v-list-item-content>Estado:</v-list-item-content>
                     <v-list-item-content class="display-1">
                       <div>
                         <v-icon v-if="item.paid" color="green"
@@ -79,7 +79,7 @@
                   </v-list-item>
 
                   <v-list-item>
-                    <v-list-item-content>Payment Method:</v-list-item-content>
+                    <v-list-item-content>Metodo de pago:</v-list-item-content>
                     <v-list-item-content class="align-end">
                       {{ item.paymentMethod }}
                     </v-list-item-content>
@@ -100,9 +100,9 @@
                   </v-list-item>
 
                   <v-list-item>
-                    <v-list-item-content>Delivery Date:</v-list-item-content>
+                    <v-list-item-content>Fecha:</v-list-item-content>
                     <v-list-item-content class="align-end">
-                      {{ item.deliveryDate }}
+                      {{ item.createdAt }}
                     </v-list-item-content>
                   </v-list-item>
 
@@ -185,18 +185,22 @@
               </v-card>
             </v-col>
             <v-col>
-              <v-card max-height="420" class="overflow-auto secondary mt-5">
+              <v-card max-height="420" class="overflow-auto green darken-1 mt-5">
                 <v-col v-for="(pro, k) in item.products" :key="k">
                   <v-col>
+                    <p class="primary--text">{{ pro.name }}</p>
                     <p>
-                      C/Product:
+                      Cantidad:
                       <span class="yellow--text">{{ pro.cantidad }}</span>
                     </p>
-                    <p class="primary--text">{{ pro.name }}</p>
-                    <p>Portion: {{ pro.selectedPortion[0].title }}</p>
+                    <p>Porción: {{ pro.selectedPortion[0].description }}</p>
                     <p>
-                      Total : $
-                      <span class="green--text">{{ pro.totalProduct }}</span>
+                      Precio:
+                      <span> {{ pro.price }} $</span>
+                    </p>
+                    <p>
+                      Total:
+                      <span class="text-h6"> {{ pro.price * pro.cantidad }} $</span>
                     </p>
                   </v-col>
                   <v-divider></v-divider>

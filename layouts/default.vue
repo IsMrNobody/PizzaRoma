@@ -110,7 +110,7 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-cupcake',
+          icon: 'mdi-pizza',
           title: 'Home',
           to: '/'
         },

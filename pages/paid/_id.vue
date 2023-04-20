@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-col class="text-center mt-5 display-1">
-      Gracias por tu compra! Tu orden esta en proceso
+    <v-col class="text-center mt-5 text-h5">
+      Tu orden esta en proceso!
     </v-col>
     <OrderForm /> 
   </div>

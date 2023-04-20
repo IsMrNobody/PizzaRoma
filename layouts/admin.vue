@@ -3,7 +3,7 @@
     <v-navigation-drawer
       v-model="drawer"
       :clipped="clipped"
-      class="tercero"
+      class=""
       fixed
       app
     >
@@ -18,16 +18,15 @@
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
-          <v-list-item-content>
+          <!-- <v-list-item-content>
             <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
+          </v-list-item-content> -->
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
       :clipped-left="clipped"
       fixed
-      color="#EAAC9D"
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
@@ -77,14 +76,14 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-cupcake',
+          icon: 'mdi-pizza',
           title: 'Home',
           to: '/'
         },
         {
           icon: 'mdi-storefront',
-          title: 'Store',
-          to: '/store'
+          title: 'Menu',
+          to: '/menu'
         }
       ],
       icons: [
@@ -95,7 +94,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Magia Legal'
+      title: 'pizza roma'
     }
   },
   methods: {
@@ -110,17 +109,5 @@ export default {
 .logoBar {
   /* margin-top: 75px; */
   width: 180px;
-}
-.greenColor {
-  background-color: #565D47;
-}
-.rosaColor {
-  background-color: #EAAC9D;
-}
-.beihgColor {
-  background-color: #EAAC9D;
-}
-.marronColor {
-  background-color: #B49C73;
 }
 </style>

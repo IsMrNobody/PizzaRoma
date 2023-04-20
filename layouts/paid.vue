@@ -77,14 +77,14 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-cupcake',
+          icon: 'mdi-pizza',
           title: 'Home',
           to: '/'
         },
         {
           icon: 'mdi-storefront',
-          title: 'Store',
-          to: '/store'
+          title: 'Menu',
+          to: '/menu'
         }
       ],
       icons: [
@@ -95,7 +95,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Magia Legal'
+      title: 'pizza roma'
     }
   },
   methods: {

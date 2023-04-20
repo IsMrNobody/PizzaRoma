@@ -20,7 +20,7 @@
           Metodo de Pago: {{ paymentSelet.type }}
         </v-btn>
         <v-row v-else class="green my-auto">
-          <p class="mx-auto my-auto mt-2 mb-2 display-1">!Gracias por su compra, <br /> estaremos en contacto pronto!</p>
+          <h4 class="mx-auto my-auto mt-2 mb-2">!Gracias por su compra, <br /> estaremos en contacto pronto!</h4>
         </v-row>
       </v-card-actions>
       <v-col>
