@@ -43,8 +43,22 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col sm="" cols>
-        <v-card flat>
+      <v-col cols>
+        <v-col>
+          <v-switch
+            v-model="delivery"
+            label="Delivery"
+            color="orange"
+            value="red"
+            hide-details
+          ></v-switch>
+        </v-col>
+        <v-card v-if="!delivery">
+          <v-card-subtitle>
+            Pick up - Te esperamos!
+          </v-card-subtitle>
+        </v-card>
+        <v-card v-else flat>
             <v-card-subtitle>
               Agregar Dirección
             </v-card-subtitle>
@@ -156,6 +170,7 @@ export default {
   },
   data() {
     return {
+      delivery: false,
       comment: '',
       name: '',
       nameRules: [
@@ -180,6 +195,9 @@ export default {
     }
   },
   methods: {
+    deliver() {
+      this.delivery = !this.delivery
+    },
     sendOrder() {
       this.load = true
       const data = {
