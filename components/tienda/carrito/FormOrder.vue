@@ -115,14 +115,12 @@
     </v-row>
     <v-divider class="mt-5 mb-5"></v-divider>
     <v-row class="ma-4">
-      <div class="my-auto">
+      <v-row class="my-auto">
         <h2 class="text-title-1">Total:</h2>
-      </div>
-      <v-spacer></v-spacer>
-      <v-col cols="4" align="end">
-        <h2>$ {{ total }}</h2>
-      </v-col>
-      <v-col sm="2" align="end">
+        <v-spacer></v-spacer>
+
+        <h2>{{ total }} $</h2>
+        <v-spacer></v-spacer>
         <v-btn
           type="submit"
           outlined
@@ -134,9 +132,9 @@
           color="primary"
           @click="sendOrder()"
         >
-        checkout
+        pedir
         </v-btn>
-      </v-col>
+      </v-row>
     </v-row>
     <v-divider class="mt-5 mb-5"></v-divider>
   </div>

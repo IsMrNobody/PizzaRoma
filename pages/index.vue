@@ -8,7 +8,7 @@
           <p>Lunes a Domingo <br> de 10:00am a 10:00pm</p>
           <h2 class="beige--text spaci">Llegamos a la puerta de tu casa</h2>
         </v-col>
-        <v-btn outlined color="primary" to="/" class="mt-5">Ver Menu</v-btn>
+        <v-btn outlined color="primary" to="/menu" class="mt-5">Ver Menu</v-btn>
       </v-card>
     </v-img>
     <v-container>
@@ -116,7 +116,7 @@ p {
   size: 18px;
 }
 .banner {
-  height: 62vh;
+  height: 68vh;
   width: 100vw;
 }
 .siz {

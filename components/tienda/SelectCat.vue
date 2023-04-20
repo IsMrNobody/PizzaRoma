@@ -10,7 +10,7 @@
           <v-chip
             v-for="tag in category"
             :key="tag"
-            class="mx-auto"
+            class="mx-auto ml-1"
             color="marron"
             @click="setCat(tag)"
           >

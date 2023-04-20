@@ -53,49 +53,50 @@
             flat
           >
             <v-col>
-              <v-row v-for="(car, i) in carrito" :key="i">
-                <v-col sm="3" cols>
-                  <v-card width="auto" height="90" elevation="10">
+              <v-row v-for="(car, i) in carrito" :key="i" justify="center">
+                <v-col sm="3">
+                  <v-card width="80" height="80" elevation="10">
                     <v-img height="100%" :src="car.img.url"></v-img>
                   </v-card>
                 </v-col>
-                <v-col class="my-auto" sm="3" cols>
-                  <p class="grey--text">{{ car.name }}
-                    <span>/ {{ car.selectedPortion.title }}</span>
-                  </p>
-                </v-col>
-                <v-col class="my-auto" sm="3" cols="6">
-                  <v-row justify="space-around">
-                    <v-btn @click="restar(i)">
+                <!-- <v-spacer></v-spacer> -->
+                <v-col class="my-auto" sm="3" cols="8">
+                  <v-row>
+                    <p class="grey--text">{{ car.name }}
+                      <span>/ {{ car.selectedPortion.title }}</span>
+                    </p>
+                    <v-spacer></v-spacer>
+                    <p class="text-h6 green--text my-auto">{{ car.totalProducto || car.price }} $</p>
+                  </v-row>
+                  <v-row>
+                    <v-btn rounded @click="restar(i)">
                       -
                     </v-btn>
                     <p class="pa-2 text-center">{{ car.cantidad }}</p>
-                    <v-btn @click="sumar(i)">
+                    <v-btn rounded @click="sumar(i)">
                       +
                     </v-btn>
                   </v-row>
                 </v-col>
-                <v-spacer></v-spacer>
-                <v-col class="my-auto text-center">
-                  <p class="text-h6">$ {{ car.totalProducto || car.price }}</p>
-                </v-col>
+                <!-- <v-col class="my-auto">
+                  <p class="text-h7 green--text">{{ car.totalProducto || car.price }} $</p>
+                </v-col> -->
+                <!-- <v-spacer></v-spacer> -->
               </v-row>
             </v-col>
           </v-card>
           <v-divider v-show="verCarro" class="mt-5 mb-5"></v-divider>
           <ConfirmPayment v-if="verConfirm" :total="total" />
           <v-row v-show="verCarro" class="ma-4">
-            <div class="my-auto">
+            <v-row class="my-auto">
               <h2 class="text-title-1">Total:</h2>
-            </div>
-            <!-- <v-spacer></v-spacer> -->
-            <v-col align="end">
-              <h2>$ {{ total }}</h2>
-            </v-col>
-            <!-- <v-spacer></v-spacer> -->
+              <v-spacer/>
+              <h2>{{ total }} $</h2>
+            </v-row>
+            <v-spacer></v-spacer>
             <v-col sm="2" align="end">
               <v-btn outlined large light color="primary" @click="seeForm()">
-              Comprar
+              checkout
               </v-btn>
             </v-col>
           </v-row>

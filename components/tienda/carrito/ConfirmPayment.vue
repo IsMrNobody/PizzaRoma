@@ -19,8 +19,8 @@
         <v-btn v-if="paymentSelet.type === 'Paypal'" color="primary" outlined block @click="paypal()">
           Metodo de Pago: {{ paymentSelet.type }}
         </v-btn>
-        <v-row v-else class="secondary my-auto">
-          <p class="mx-auto my-auto mt-2 mb-2 primary--text display-1">!Gracias por su compra, <br /> estaremos en contacto pronto!</p>
+        <v-row v-else class="green my-auto">
+          <p class="mx-auto my-auto mt-2 mb-2 display-1">!Gracias por su compra, <br /> estaremos en contacto pronto!</p>
         </v-row>
       </v-card-actions>
       <v-col>

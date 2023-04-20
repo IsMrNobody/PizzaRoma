@@ -57,7 +57,7 @@
       <!-- <v-toolbar-title v-text="title" /> -->
       <v-spacer />
       <!-- <v-btn text>About Us</v-btn> -->
-      <v-btn color="primary" text @click="contacto">Contacto</v-btn>
+      <v-btn class="d-none d-sm-flex" color="primary" text @click="contacto">Contacto</v-btn>
       <v-btn color="primary" to="/menu" text >Menu</v-btn>
     </v-app-bar>
     <v-main class="tercero">
@@ -116,8 +116,8 @@ export default {
         },
         {
           icon: 'mdi-storefront',
-          title: 'Store',
-          to: '/store'
+          title: 'Menu',
+          to: '/menu'
         }
       ],
       icons: [
@@ -144,7 +144,7 @@ export default {
 
 <style scoped>
 .logoBar {
-  width: 180px;
+  /* width: 180px; */
 }
 .marronColor {
   background-color: #071622;
