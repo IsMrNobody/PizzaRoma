@@ -10,11 +10,12 @@
     transition="scale-transition"
     offset-y
     min-width="auto"
+    disabled
   >
     <template #activator="{ on, attrs }">
       <v-text-field
         v-model="date"
-        label="Delivery Date"
+        label="Fecha"
         prepend-icon="mdi-calendar"
         v-bind="attrs"
         v-on="on"
@@ -24,6 +25,7 @@
       v-model="date"
       no-title
       scrollable
+      disabled
     >
       <v-spacer></v-spacer>
       <v-btn

@@ -2,7 +2,7 @@
   <div>
     <v-row>
       <v-col sm="" cols>
-        <v-card flat>
+        <v-card flat class="transparent">
           <v-card-subtitle>
             Detalles de contacto
           </v-card-subtitle>
@@ -42,6 +42,28 @@
             </v-form>
           </v-card-text>
         </v-card>
+      </v-col>
+      <v-col sm="" cols>
+        <v-card class="transparent">
+          <v-card-subtitle>
+            Metodos de pago
+          </v-card-subtitle>
+          <PaymentCheck />
+        </v-card>        
+        <v-card class="mt-5 transparent" flat>
+          <v-textarea
+            v-model="comment"
+            outlined
+            bg-color="light-blue"
+            auto-grow
+            label="Comentario"
+            rows="4"
+            shaped
+          ></v-textarea>
+        </v-card>
+        <div class="mt-4">
+          <DatePicker />
+        </div>
       </v-col>
       <v-col cols>
         <v-col>
@@ -105,27 +127,7 @@
                 </v-form>
             </v-card-text>
         </v-card>
-      </v-col>
-      <v-col sm="" cols>
-        <v-card-subtitle>
-          Metodos de pago
-        </v-card-subtitle>
-        <PaymentCheck />
-        <!-- <v-col class="mt-4">
-          <DatePicker />
-        </v-col> -->
-        <v-card class="mt-5 transparent" flat>
-          <v-textarea
-            v-model="comment"
-            outlined
-            bg-color="light-blue"
-            auto-grow
-            label="Comentario"
-            rows="4"
-            shaped
-          ></v-textarea>
-        </v-card>
-      </v-col>
+      </v-col>      
     </v-row>
     <v-divider class="mt-5 mb-5"></v-divider>
     <v-row class="ma-4">
@@ -156,11 +158,11 @@
 
 <script>
 import PaymentCheck from '@/components/tienda/carrito/PaymentCheck'
-// import DatePicker from '@/components/tienda/carrito/DatePicker'
+import DatePicker from '@/components/tienda/carrito/DatePicker'
 export default {
   components: {
     PaymentCheck,
-    // DatePicker
+    DatePicker
   },
   props: {
     total: {

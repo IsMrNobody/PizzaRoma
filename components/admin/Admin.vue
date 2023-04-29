@@ -30,8 +30,8 @@
             <v-icon v-if="item.status === 'Entregado'" color="green"
               >mdi-check</v-icon
             >
-            <p>{{ item.createdAt }}</p>
           </h3>
+          <p class="grey--text">ID: {{ item._id.substr(18) }}</p>
           <!-- <v-spacer></v-spacer> -->
           <!-- {{ item.createdAt }} -->
         </v-expansion-panel-header>
@@ -39,26 +39,30 @@
         <v-expansion-panel-content>
           <v-row>
             <v-col>
-              <v-card class="mt-5" max-width="800">
-                <v-card-title class="subheading font-weight-bold">
-                  {{ item.nameUser }}
-                </v-card-title>
-                <v-card-subtitle class="subheading font-weight-bold">
+              <v-card class="mt-5 black" max-width="800">
+                <v-card-actions>
+                  <v-card-subtitle class="subheading">
+                    Cliente: {{ item.nameUser }}
+                  </v-card-subtitle>
+                    <v-spacer></v-spacer>
+                    <v-card-subtitle>
+                      Pedido #: {{ item._id.substr(18) }}
+                    </v-card-subtitle>
+                </v-card-actions>
+                <!-- <v-card-subtitle class="subheading font-weight-bold">
                   {{ item.email }}
                   <br />
-                  ID: {{ item._id }}
-                </v-card-subtitle>
-                <v-card-actions class="subheading font-weight-bold">
-                  <v-btn class="mr-3" small icon @click="copy(item.phone)">
-                    <v-icon color="green"> mdi-whatsapp </v-icon>
+                </v-card-subtitle> -->
+                <div class="text-center mb-4">
+                  <v-btn text outlined color="green" @click="copy(item.phone)">
+                    <v-icon> mdi-whatsapp </v-icon>
+                    {{ item.phone }}
                   </v-btn>
-                  +{{ item.phone }}
-                  <v-spacer></v-spacer>
-                </v-card-actions>
+                </div>
 
                 <v-divider></v-divider>
 
-                <v-list dense class="orange darken-2">
+                <v-list dense class="grey darken-2">
                   <v-list-item>
                     <v-list-item-content>Monto:</v-list-item-content>
                     <v-list-item-content class="text-h4 align-end">
@@ -102,7 +106,7 @@
                   <v-list-item>
                     <v-list-item-content>Fecha:</v-list-item-content>
                     <v-list-item-content class="align-end">
-                      {{ item.createdAt }}
+                      {{ item.deliveryDate }}
                     </v-list-item-content>
                   </v-list-item>
 
@@ -121,31 +125,33 @@
 
                   <div v-if="item.floor">
                     <v-list-item>
-                      <v-list-item-content>floor:</v-list-item-content>
+                      <v-list-item-content>Piso:</v-list-item-content>
                       <v-list-item-content class="align-end">
                         {{ item.floor }}
                       </v-list-item-content>
                     </v-list-item>
                   </div>
 
+                  <div v-if="item.address">
+                    <v-list-item>
+                      <v-list-item-content>Dirección:</v-list-item-content>
+                      <v-list-item-content class="align-end">
+                        {{ item.address }}
+                      </v-list-item-content>
+                    </v-list-item>
+                  </div>
+
                   <div v-if="item.house">
                     <v-list-item>
-                      <v-list-item-content>house:</v-list-item-content>
+                      <v-list-item-content>Casa:</v-list-item-content>
                       <v-list-item-content class="align-end">
                         {{ item.house }}
                       </v-list-item-content>
                     </v-list-item>
                   </div>
 
-                  <div v-if="item.address">
-                    <v-card-subtitle> Address: </v-card-subtitle>
-                    <v-card-text class="beige--text">
-                      {{ item.address }}
-                    </v-card-text>
-                  </div>
-
                   <div v-if="item.comments">
-                    <v-card-subtitle> Comment: </v-card-subtitle>
+                    <v-card-subtitle> Comentario: </v-card-subtitle>
                     <v-card-text class="beige--text">
                       {{ item.comments }}
                     </v-card-text>
@@ -185,15 +191,16 @@
               </v-card>
             </v-col>
             <v-col>
-              <v-card max-height="420" class="overflow-auto green darken-1 mt-5">
+              <v-card max-height="420" class="overflow-auto grey darken-4 elevation-10 mt-5">
                 <v-col v-for="(pro, k) in item.products" :key="k">
                   <v-col>
-                    <p class="primary--text">{{ pro.name }}</p>
+                    <span class="grey--text">{{ pro.name }}</span>
+                    <p class="primary--text">{{ pro.selectedPortion[0].description }}</p>
                     <p>
                       Cantidad:
-                      <span class="yellow--text">{{ pro.cantidad }}</span>
+                      <span class="green--text">{{ pro.cantidad }}</span>
                     </p>
-                    <p>Porción: {{ pro.selectedPortion[0].description }}</p>
+                    <!-- <p>Porción: {{ pro.selectedPortion[0].description }}</p> -->
                     <p>
                       Precio:
                       <span> {{ pro.price }} $</span>
@@ -203,7 +210,7 @@
                       <span class="text-h6"> {{ pro.price * pro.cantidad }} $</span>
                     </p>
                   </v-col>
-                  <v-divider></v-divider>
+                  <v-divider class="yellow"></v-divider>
                 </v-col>
               </v-card>
             </v-col>

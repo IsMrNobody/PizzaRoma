@@ -143,7 +143,7 @@
       contactar() {
         const phone = this.phone
         const data = {
-          text: `Nuevo pedido numero ${(this.order._id).substr(14)}`
+          text: `Hola soy ${(this.order.nameUser)}, y mi pedido es: ${(this.order._id).substr(18)}`
         }
         window.open(`https://wa.me/${phone}?text=${data.text}`)
       }
