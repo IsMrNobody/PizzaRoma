@@ -15,6 +15,24 @@
       </v-card-actions>
       <!-- <p class="grey--text">Payment address:</p>
       <p class="primary--text text-h5 text-decoration-underline">{{ paymentSelet.email }}</p> -->
+      <v-col v-if="paymentSelet.type === 'Pago Movil'" justify="center">
+        <p class="grey--text">Cuenta de pago: </p>
+        <p>
+          Banco: {{ paymentSelet.bankNumber }}
+        </p>
+        <p>
+          CI: {{ paymentSelet.cedula }}
+        </p>
+        <p>
+          Tlf: {{ paymentSelet.phone }}
+        </p>
+      </v-col>
+      <v-col v-if="paymentSelet.type === 'Zelle'" justify="center">
+        <p class="grey--text">Cuenta de pago: </p>
+        <p>
+          {{ paymentSelet.email }}
+        </p>
+      </v-col>
       <v-card-actions>
         <v-btn v-if="paymentSelet.type === 'Paypal'" color="primary" outlined block @click="paypal()">
           Metodo de Pago: {{ paymentSelet.type }}

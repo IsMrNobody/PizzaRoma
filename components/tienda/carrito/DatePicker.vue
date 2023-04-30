@@ -16,7 +16,7 @@
       <v-text-field
         v-model="date"
         label="Fecha"
-        prepend-icon="mdi-calendar"
+        disabled
         v-bind="attrs"
         v-on="on"
       ></v-text-field>

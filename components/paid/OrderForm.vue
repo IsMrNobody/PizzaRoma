@@ -50,11 +50,27 @@
       <v-list-item-subtitle>{{ order.paymentMethod }}</v-list-item-subtitle>
     </v-list-item>
 
+    <v-list-item v-if="order.paymentMethod === 'Pago Movil'">
+      <v-list-item-icon>
+        <v-icon>mdi-bank</v-icon>
+      </v-list-item-icon>
+      <v-list-item-subtitle>{{ payment.bankNumber }}</v-list-item-subtitle>
+      <v-list-item-subtitle>{{ payment.phone }}</v-list-item-subtitle>
+      <v-list-item-subtitle>{{ payment.cedula }}</v-list-item-subtitle>
+    </v-list-item>
+
+     <v-list-item v-if="order.paymentMethod === 'Zelle'">
+      <v-list-item-icon>
+        <v-icon>mdi-bank</v-icon>
+      </v-list-item-icon>
+      <v-list-item-subtitle>{{ payment.email }}</v-list-item-subtitle>
+    </v-list-item>
+
     <v-list-item v-if="order.paymentMethod !== 'Cash'">
       <v-list-item-icon v-if="order.numberRef">Ref:</v-list-item-icon>
       <v-list-item-subtitle v-if="order.numberRef">{{ order.numberRef }}</v-list-item-subtitle>
 
-      <v-col v-else>
+      <v-col v-else>       
         <v-row>
           <v-text-field
             v-model="ref"
@@ -71,7 +87,7 @@
             @click="checkOrder"
           >
             check
-          </v-btn>
+          </v-btn>        
         </v-row>
       </v-col>
     </v-list-item>
@@ -84,14 +100,14 @@
     ></v-slider> -->
 
     <v-list class="marron">
-      <v-card-text>
+      <v-card-text class="grey--text">
         Productos:
       </v-card-text>
       <v-list-item
         v-for="(item, i) in order.products"
         :key="i"
       >
-        <v-list-item-title>{{ item.name }}</v-list-item-title>
+        <v-list-item-title>{{ item.name }} x {{ item.cantidad }}</v-list-item-title>
 
         <!-- <v-list-item-subtitle>
           {{ item.products}}
@@ -128,6 +144,9 @@
       },
       phone() {
         return this.$store.state.merchant.phone
+      },
+      payment() {
+        return this.$store.state.carrito.selectedPayment
       }
     },
     async created() {

@@ -72,8 +72,9 @@
 
                   <v-list-item>
                     <v-list-item-content>Estado:</v-list-item-content>
-                    <v-list-item-content class="display-1">
+                    <v-list-item-content>
                       <div>
+                        Pagado
                         <v-icon v-if="item.paid" color="green"
                           >mdi-check</v-icon
                         >
@@ -180,7 +181,7 @@
                   <v-spacer></v-spacer>
                   <v-btn
                     :disabled="item.status === 'Entregado'"
-                    color="green"
+                    color=""
                     outlined
                     small
                     @click="editOrder({status: 'Entregado', paid: true, id: item._id})"
@@ -194,21 +195,19 @@
               <v-card max-height="420" class="overflow-auto grey darken-4 elevation-10 mt-5">
                 <v-col v-for="(pro, k) in item.products" :key="k">
                   <v-col>
-                    <span class="grey--text">{{ pro.name }}</span>
+                    <v-card-actions>
+                      <p>
+                        U/
+                        <span class="green--text">{{ pro.cantidad }}</span>
+                      </p>
+                      <v-spacer></v-spacer>
+                      <p>
+                        Total:
+                        <span class="text-h6"> {{ pro.price * pro.cantidad }} $</span>
+                      </p>
+                    </v-card-actions>
+                    <span class="grey--text">{{ pro.name }} - {{ pro.price }}$</span>
                     <p class="primary--text">{{ pro.selectedPortion[0].description }}</p>
-                    <p>
-                      Cantidad:
-                      <span class="green--text">{{ pro.cantidad }}</span>
-                    </p>
-                    <!-- <p>Porción: {{ pro.selectedPortion[0].description }}</p> -->
-                    <p>
-                      Precio:
-                      <span> {{ pro.price }} $</span>
-                    </p>
-                    <p>
-                      Total:
-                      <span class="text-h6"> {{ pro.price * pro.cantidad }} $</span>
-                    </p>
                   </v-col>
                   <v-divider class="yellow"></v-divider>
                 </v-col>

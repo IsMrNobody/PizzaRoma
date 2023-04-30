@@ -22,14 +22,6 @@
                 required
               ></v-text-field>
               <v-text-field
-                ref="email"
-                v-model="email"
-                :rules="emailRules"
-                outlined
-                placeholder="Email"
-                required
-              ></v-text-field>
-              <v-text-field
                 ref="phone"
                 v-model="phone"
                 :rules="phoneRules"
@@ -37,6 +29,14 @@
                 type="Number"
                 outlined
                 placeholder="telefono"
+                required
+              ></v-text-field>
+              <v-text-field
+                ref="email"
+                v-model="email"
+                :rules="emailRules"
+                outlined
+                placeholder="Email"
                 required
               ></v-text-field>
             </v-form>
@@ -61,7 +61,7 @@
             shaped
           ></v-textarea>
         </v-card>
-        <div class="mt-4">
+        <div v-show="fecha" class="mt-4">
           <DatePicker />
         </div>
       </v-col>
@@ -81,24 +81,25 @@
           </v-card-subtitle>
         </v-card>
         <v-card v-else flat>
-            <v-card-subtitle>
+            <!-- <v-card-subtitle>
               Agregar Dirección
-            </v-card-subtitle>
+            </v-card-subtitle> -->
             <v-card-text>
-                <v-alert
+                <!-- <v-alert
                   outlined
                   color="primary"
                   text
                 >
                   Delivery incluido
-                </v-alert>
+                </v-alert> -->
+                
                 <v-form>
                   <v-text-field
                     ref="address"
                     v-model="address"
                     outlined
                     label="Dirección"
-                    placeholder="Dirección"
+                    placeholder="Agregar Dirección"
                     required
                     class="mt-7"
                   ></v-text-field>
@@ -172,6 +173,7 @@ export default {
   },
   data() {
     return {
+      fecha: '',
       delivery: false,
       comment: '',
       name: '',
@@ -210,6 +212,7 @@ export default {
        house: this.house,
        floor: this.floor,
        comments: this.comment,
+       delivery: this.delivery
       }
       if (data.email && data.phone && data.nameUser) {    
         this.$store.dispatch('carrito/sendOrder', data)
