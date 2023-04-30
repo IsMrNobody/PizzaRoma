@@ -74,7 +74,6 @@
                     <v-list-item-content>Estado:</v-list-item-content>
                     <v-list-item-content>
                       <div>
-                        Pagado
                         <v-icon v-if="item.paid" color="green"
                           >mdi-check</v-icon
                         >
