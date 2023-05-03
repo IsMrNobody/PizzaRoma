@@ -71,7 +71,7 @@
             v-model="delivery"
             label="Delivery"
             color="orange"
-            value="red"
+            :value="delivery"
             hide-details
           ></v-switch>
         </v-col>

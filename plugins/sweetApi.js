@@ -15,7 +15,7 @@ export const restaurante = async () => {
 export const productos = async () => {
   try {
     const respuesta = await axios.get(`${SWEET_API_URL}/product/user/${USER_ID}`)
-    console.log(respuesta.data)
+    // console.log(respuesta.data)
     return respuesta.data
   } catch (error) {
     return error

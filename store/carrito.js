@@ -114,6 +114,7 @@ export const actions = {
         ...form
       }
       const order = await sendOrder(pedido)
+      // console.log(pedido)
       if (order.data.userEmail) {
         if (pedido.paymentMethod !== 'Cash') {
           await commit('verConfirm')
