@@ -26,7 +26,9 @@
         </v-row>
       </div>
     </v-container>
+    <div>
       <ParallaxHome class="parallax" />
+    </div>
     <v-container fluid>
       <div>
         <BannerHome />
@@ -100,7 +102,7 @@ export default {
   padding-bottom: 120px;
 }
 .parallax {
-  padding-top: 80px;
+  /* padding-top: 80px; */
   padding-bottom: 120px;
 }
 .contacto {
