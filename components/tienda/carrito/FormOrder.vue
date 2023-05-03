@@ -206,15 +206,15 @@ export default {
       this.load = true
       const data = {
        nameUser: this.name,
-       phone: this.phone,
        userEmail:  this.email,
+       phone: this.phone,
        address: this.address,
        house: this.house,
        floor: this.floor,
        comments: this.comment,
        delivery: this.delivery
       }
-      if (data.email && data.phone && data.nameUser) {    
+      if (data.userEmail && data.phone && data.nameUser) {
         this.$store.dispatch('carrito/sendOrder', data)
       } else {
         alert('Debes rellenar todos los campos')
